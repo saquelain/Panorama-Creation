@@ -1,4 +1,3 @@
-
 import os
 import cv2
 
@@ -7,14 +6,13 @@ mainFolder = 'Images'
 
 myFolders = os.listdir(mainFolder)
 #print(myFolders)
-
 for folder in myFolders:
     path = mainFolder + '/' + folder
     images = []
     myList = os.listdir(path)
     #print(f"total number of folders detected: {len(myList)}")
     
-                #better =(1200, 600)>(1400, 800), (1000, 778) (1200, 934)
+                #better = (1200, 600)>(1400, 800), (1000, 778) (1200, 934)
     
     for imgN in myList:
         curImg = cv2.imread(f'{path}/{imgN}')
@@ -24,7 +22,7 @@ for folder in myFolders:
         #print(dim)
         curImg = cv2.resize(curImg, dim, None, 0.2, 0.2) 
         images.append(curImg)
-        
+       
         #cv2.imshow('img', curImg)
               
 
@@ -36,7 +34,11 @@ for folder in myFolders:
         print("panorama generated !")
         cv2.imshow(f'{folder}', result)
         cv2.waitKey(0)
-        cv2.destroyAllWindows()
+        
     else:
         print("panorama generation failed !")
     #cv2.imshow('pano', result)
+
+    
+    #print(img[0])
+cv2.destroyAllWindows()
