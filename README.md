@@ -2,6 +2,7 @@
 This will create a panorama photo of two or multiple pics together.
 This will create a single photo by stitching multiple photos.
 Make sure that if you add two photos, their features should be same at the stitching part, so that it does not have problem in finding the same features in both the images.
+
 image1:
 ![1](https://user-images.githubusercontent.com/54945131/117291478-b2010d80-ae8c-11eb-9343-16e017d65474.jpg)
 image2:
